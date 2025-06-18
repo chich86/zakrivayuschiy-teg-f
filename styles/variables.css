@@ -1,1 +1,8 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --main-font: "Inter Variable";
+  --pixel-font: "Press Start 2P Regular";
+  --main-font-weight: 400;
+  --head-font-weight: 700;
+  --page-width: clamp(20rem, 13.2143rem + 33.9286vw, 43.75rem);
+}

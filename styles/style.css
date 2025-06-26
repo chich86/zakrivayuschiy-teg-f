@@ -99,7 +99,6 @@
 }
 
 .card__icon-button {
-  border: none;
   background-color: transparent;
   cursor: pointer;
   block-size: 38px;

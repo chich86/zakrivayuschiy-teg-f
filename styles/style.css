@@ -39,7 +39,7 @@
   margin-block-end: 100px;
   padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8rem) 0
     clamp(7.5rem, 7.1479rem + 1.5023vw, 8rem);
-  font-family: var(--pixel-font), sans-serif;
+  font-family: var(--pixel-font), fantasy;
   text-transform: uppercase;
 }
 
@@ -72,10 +72,10 @@
 }
 
 .main__section-title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-variation-settings: "wght" var(--head-font-weight, 700);
-  padding: 4px 10px 5px;
-  line-height: 1.21;
+  padding: 5px 10px 5px;
+  line-height: 1.18;
 }
 
 .card__content-text {
@@ -88,6 +88,7 @@
 .main__section-text {
   font-size: 18px;
   font-weight: var(--main-font-weight);
+  line-height: 21px;
 }
 
 .card__content-buttons {
@@ -118,7 +119,7 @@
 .main__button {
   position: relative;
   border: 2px solid rgba(0, 0, 0, 1);
-  font-family: var(--pixel-font);
+  font-family: var(--pixel-font), fantasy;
   background-color: #fff;
   cursor: pointer;
   color: #fff;
@@ -184,14 +185,15 @@
 .section__image {
   position: relative;
   inline-size: 100%;
-  block-size: 100%;
+  block-size: var(--page-width);
+  border: 2px #000 solid;
 }
 
 .main__section-image {
   block-size: 100%;
   inline-size: 100%;
-  justify-self: center;
-  border-block: 2px #000 solid;
+  object-fit: cover;
+  object-position: right;
 }
 
 .filter_grayscale {
@@ -228,14 +230,14 @@
   top: 25px;
   right: 25px;
   mix-blend-mode: hard-light;
-  font-family: var(--pixel-font), sans-serif;
+  font-family: var(--pixel-font), fantasy;
   font-size: 14px;
   line-height: 14px;
   opacity: 0.5;
   text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
 }
 
-@supports (-webkit-text-stroke: 1px #fff) {
+@supports((text-stroke: 1px #fff) (-webkit-text-stroke: 1px #fff)) {
   .image-label {
     text-shadow: none;
     -webkit-text-stroke: 1px #fff;
@@ -246,7 +248,7 @@
   inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   padding: 30px;
 }
 
@@ -277,7 +279,7 @@
 }
 
 .dialog__content-text {
-  font-family: var(--pixel-font);
+  font-family: var(--pixel-font), fantasy;
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
@@ -297,5 +299,16 @@
 
   .main {
     inline-size: 100%;
+  }
+
+  .save__button {
+    flex-direction: column;
+    min-inline-size: 306px;
+    min-block-size: 84px;
+  }
+
+  .save__button-svg {
+    inline-size: 28px;
+    block-size: 28px;
   }
 }

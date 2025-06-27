@@ -237,7 +237,7 @@
   text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
 }
 
-@supports((text-stroke: 1px #fff) (-webkit-text-stroke: 1px #fff)) {
+@supports((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   .image-label {
     text-shadow: none;
     -webkit-text-stroke: 1px #fff;
@@ -310,5 +310,10 @@
   .save__button-svg {
     inline-size: 28px;
     block-size: 28px;
+  }
+
+  .image-label {
+    top: 23px;
+    right: 10px;
   }
 }

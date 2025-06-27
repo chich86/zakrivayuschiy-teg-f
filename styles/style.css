@@ -307,14 +307,11 @@
     margin-block-end: 240px;
     max-inline-size: 341px;
     padding: 30px 40px;
-    /*inline-size: 100%;
-    */
   }
 
   .save__button {
     flex-direction: column;
     min-inline-size: 306px;
-    min-block-size: 84px;
   }
 
   .save__button-svg {

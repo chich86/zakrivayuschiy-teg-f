@@ -131,6 +131,7 @@
   font-size: 14px;
   z-index: 1;
   mix-blend-mode: difference;
+  line-height: 90%;
 }
 
 .main__button::after {
@@ -168,7 +169,7 @@
   color: #fff;
   background-color: #fff;
   min-inline-size: 335px;
-  min-block-size: 55px;
+  padding: 15px 17px;
   gap: 10px;
 }
 
@@ -186,7 +187,7 @@
   position: relative;
   inline-size: 100%;
   block-size: var(--page-width);
-  border: 2px #000 solid;
+  border-block: 2px #000 solid;
 }
 
 .main__section-image {
@@ -237,7 +238,7 @@
   text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
 }
 
-@supports((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+@supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   .image-label {
     text-shadow: none;
     -webkit-text-stroke: 1px #fff;
@@ -250,6 +251,7 @@
   align-items: center;
   gap: 30px;
   padding: 30px;
+  border: 2px #000 solid;
 }
 
 .save__dialog:open {
@@ -288,7 +290,7 @@
 
 .dialog__button {
   inline-size: 100%;
-  padding: 12.5px;
+  padding: 9px;
   text-transform: uppercase;
 }
 
@@ -299,6 +301,14 @@
 
   .main {
     inline-size: 100%;
+  }
+
+  .save__dialog:open {
+    margin-block-end: 240px;
+    max-inline-size: 341px;
+    padding: 30px 40px;
+    /*inline-size: 100%;
+    */
   }
 
   .save__button {
